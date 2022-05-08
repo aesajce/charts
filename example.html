@@ -1,0 +1,39 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <table id="example-table" border="1">
+        <tr>
+            <th>Exams</th>
+            <th>Subject-1</th>
+            <th>Subject-2</th>
+            <th>Subject-3</th>
+        </tr>
+        <tr>
+            <td>Exam-1</td>
+            <td>35</td>
+            <td>42</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>Exam-2</td>
+            <td>36</td>
+            <td>33</td>
+            <td>43</td>
+        </tr>
+        <tr>
+            <td>Exam-3</td>
+            <td>16</td>
+            <td>28</td>
+            <td>36</td>
+        </tr>
+    </table>
+    <hr>
+    <div id="chart-div" style="height: 350px;"></div>
+  </body>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aesajce/charts@main/v1/aeschart.js"></script>
+  <script>
+      drawBarChartByTable('example-table','chart-div','Exam Marks','Student : Abcd',false);
+  </script>
+</html>
