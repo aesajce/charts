@@ -7,5 +7,12 @@ Charts for AES using Google Charts
 &lt;script src="https://cdn.jsdelivr.net/gh/aesajce/charts@main/v1/aeschart.js" > &lt;/script>
 
 &lt;script><br>
-&nbsp;&nbsp;&nbsp;&nbsp;drawBarChartByTable(&lt;SourceTableId>,&lt;TargetDivId>,[Title],[Sub-Title],[Table-Transpose]);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;drawBarChartByTable(&lt;SourceTableId>,&lt;TargetId>,[Title],[Sub-Title],[Transpose]);<br>
 &lt;/script>
+
+<h3>Options</h3>
+SourceTableId (Required) : Source html table id
+TargetId (Required) : Target element id to display the chart.
+Title (Optional): Chart title
+SubTitle (Optional): Chart sub-title
+Transpose (Optional) : True if requied to transpose source table. (Default : False)
