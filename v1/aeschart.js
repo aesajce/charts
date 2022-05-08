@@ -13,7 +13,7 @@ let makeChart=(tableArray,targetId,title,subtitle)=>{
         chart.draw(data, google.charts.Bar.convertOptions(options));
     }
 }
-let tableToArray=(tableId,transpose)=>{
+let tableToArray=(tableId,transpose,targetId)=>{
     let isVal=false;
     var tableInfo = Array.prototype.map.call(document.querySelectorAll('#'+tableId+' tr'), function(tr){
     return Array.prototype.map.call(tr.querySelectorAll('td,th'), function(td){
@@ -23,7 +23,11 @@ let tableToArray=(tableId,transpose)=>{
             return isNaN(td.innerHTML.trim())?td.innerHTML.trim():Number(td.innerHTML.trim());
         });
     });
-    if(isVal) return transpose? tableInfo[0].map((_, colIndex) => tableInfo.map(row => row[colIndex])):tableInfo;
+    if(isVal) {
+      return transpose? tableInfo[0].map((_, colIndex) => tableInfo.map(row => row[colIndex])):tableInfo;
+    }else{
+      document.getElementById(targetId).style.display="none";
+    }
 }
 
-let drawBarChartByTable = (tableId,targetId,title,subtitle,transpose) => makeChart(tableToArray(tableId,transpose),targetId,title,subtitle);
+let drawBarChartByTable = (tableId,targetId,title,subtitle,transpose) => makeChart(tableToArray(tableId,transpose,targetId),targetId,title,subtitle);
