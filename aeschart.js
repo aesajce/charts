@@ -33,5 +33,5 @@ let tableToArray=(tableId,transpose,targetId)=>{
 
 let drawBarChartByTable = (tableId,targetId,title,subtitle,transpose) => {
     let chartData = tableToArray(tableId,transpose,targetId);
-    if(chartData) makeChart(,targetId,title,subtitle);
+    if(chartData) makeChart(chartData,targetId,title,subtitle);
 }
