@@ -26,8 +26,12 @@ let tableToArray=(tableId,transpose,targetId)=>{
     if(isVal) {
       return transpose? tableInfo[0].map((_, colIndex) => tableInfo.map(row => row[colIndex])):tableInfo;
     }else{
-      document.getElementById(targetId).style.display="none";
+      try{document.getElementById(targetId).style.display="none";}catch(){}
+      return null;
     }
 }
 
-let drawBarChartByTable = (tableId,targetId,title,subtitle,transpose) => makeChart(tableToArray(tableId,transpose,targetId),targetId,title,subtitle);
+let drawBarChartByTable = (tableId,targetId,title,subtitle,transpose) => {
+    let chartData = tableToArray(tableId,transpose,targetId);
+    if(chartData) makeChart(,targetId,title,subtitle);
+}
