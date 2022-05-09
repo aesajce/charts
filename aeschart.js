@@ -26,7 +26,7 @@ let tableToArray=(tableId,transpose,targetId)=>{
     if(isVal) {
       return transpose? tableInfo[0].map((_, colIndex) => tableInfo.map(row => row[colIndex])):tableInfo;
     }else{
-       try {document.getElementById("demo").innerHTML = err.message; } catch(err) {}
+       try { document.getElementById(targetId).style.display="none"; } catch(err) {}
       return null;
     }
 }
