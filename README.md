@@ -1,10 +1,12 @@
 # AES Charts
 Charts for AES using Google Charts
 
+<h3>Latest Version : 1.0.1</h3>
+
 <h3>Usage:</h3>
 
 &lt;script src="https://www.gstatic.com/charts/loader.js" > &lt;/script><br>
-&lt;script src="https://cdn.jsdelivr.net/gh/aesajce/charts@1/aeschart.js" > &lt;/script>
+&lt;script src="https://cdn.jsdelivr.net/gh/aesajce/charts@1.0.1/aeschart.js" > &lt;/script>
 
 &lt;script><br>
 &nbsp;&nbsp;&nbsp;&nbsp;drawBarChartByTable(&lt;SourceTableId>,&lt;TargetId>,[Title],[Sub-Title],[Transpose]);<br>
